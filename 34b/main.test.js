@@ -29,6 +29,20 @@ const data = [
     },
     expectedResult: 12
   },
+  { // Case where it's not losing nor making money
+    data: {
+      nb: 2, 
+      tvs: [0, 0, 0, 0]
+    },
+    expectedResult: 0
+  },
+  { // Case where there's no TVs
+    data: {
+      nb: 2, 
+      tvs: []
+    },
+    expectedResult: 0
+  },
 ];
 
 describe.each(data)(`Test 34B`, (data) => {
