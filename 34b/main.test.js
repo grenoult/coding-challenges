@@ -1,19 +1,33 @@
 const main = require('./main');
 
 const data = [
-  {
+  { // Case 1 from instructions
     data: {
       nb: 3, 
       tvs: [-6, 0, 35, -2, 4]
     },
     expectedResult: 8
   },
-  {
+  { // Case 2 from instructions
     data: {
       nb: 2, 
       tvs: [7, 0, 0, -7]
     },
     expectedResult: 7
+  },
+  { // Case where it's not profitable
+    data: {
+      nb: 3, 
+      tvs: [2, 3, 4, 5]
+    },
+    expectedResult: 0
+  },
+  { // Case where it's always profitable
+    data: {
+      nb: 3, 
+      tvs: [-2, -3, -4, -5]
+    },
+    expectedResult: 12
   },
 ];
 
